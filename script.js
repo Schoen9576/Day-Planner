@@ -30,10 +30,10 @@ $(".time-block").each(function(){
     $(this).children(".description").val(localStorage.getItem(hour)); 
     
     
-    if(hour == currentTime){
+    if(hour < currentTime){
       $(this).removeClass("present future");
       $(this).addClass("past");
-    }else if ( hour > currentTime){
+    }else if ( hour === currentTime){
       $(this).removeClass("past future");
       $(this).addClass("present");
     }else{
